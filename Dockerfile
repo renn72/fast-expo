@@ -22,7 +22,7 @@ WORKDIR /app/apps/server
 RUN pnpm install --frozen-lockfile
 
 # Compile the application
-RUN pnpm compile
+RUN pnpm Build
 
 # Use a lightweight image for the final stage
 FROM node:22-slim
@@ -33,7 +33,7 @@ WORKDIR /app
 RUN mkdir db
 
 # Copy the compiled server from the builder stage
-COPY --from=builder /app/apps/server/server .
+COPY --from=builder /app/apps/server/ .
 
 # Expose port 3000
 EXPOSE 3000
@@ -42,4 +42,4 @@ EXPOSE 3000
 ENV PORT=3000
 
 # start the server
-CMD ["./server"]
+RUN pnpm start
