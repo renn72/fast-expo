@@ -18,6 +18,7 @@ COPY package.json pnpm-lock.yaml ./
 COPY pnpm-workspace.yaml ./
 COPY turbo.json ./
 
+
 # Copy app and packages
 COPY apps/server apps/server
 COPY packages packages
