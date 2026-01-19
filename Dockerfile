@@ -1,6 +1,7 @@
 # Use the official Bun image as the base image
 FROM node:22-slim AS builder
 
+RUN apt-get update -y && apt-get install curl unzip -y
 RUN npm install -g pnpm@latest-10
 RUN pnpm -v
 RUN curl -fsSL https://bun.sh/install | bash
