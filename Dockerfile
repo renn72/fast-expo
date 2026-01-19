@@ -35,6 +35,8 @@ RUN mkdir db
 # Copy the compiled server from the builder stage
 COPY --from=builder /app/apps/server/ .
 
+RUN npm install tsx@4.19.2 -g
+
 # Expose port 3000
 EXPOSE 3000
 
