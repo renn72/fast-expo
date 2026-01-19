@@ -27,6 +27,8 @@ RUN pnpm build
 # Use a lightweight image for the final stage
 FROM node:22-slim
 
+RUN npm install -g pnpm@latest-10
+
 # Set the working directory
 WORKDIR /app
 
@@ -35,7 +37,7 @@ RUN mkdir db
 # Copy the compiled server from the builder stage
 COPY --from=builder /app/apps/server/ .
 
-RUN npm install tsx@4.19.2
+RUN pnpm install tsx@4.19.2
 
 # Expose port 3000
 EXPOSE 3000
@@ -46,4 +48,4 @@ RUN ls
 ENV PORT=3000
 
 # start the server
-RUN node --import tsx dist/src/index.js
+RUN pnpm start
