@@ -1,0 +1,30 @@
+{
+  "name": "@fast-expo/api",
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./src/index.ts"
+    },
+    "./*": {
+      "default": "./src/*.ts"
+    }
+  },
+  "scripts": {},
+  "dependencies": {
+    "@fast-expo/auth": "workspace:*",
+    "@fast-expo/db": "workspace:*",
+    "@fast-expo/env": "workspace:*",
+    "@orpc/client": "catalog:",
+    "@orpc/openapi": "catalog:",
+    "@orpc/server": "catalog:",
+    "@orpc/zod": "catalog:",
+    "better-auth": "catalog:",
+    "dotenv": "catalog:",
+    "drizzle-orm": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@fast-expo/config": "workspace:*",
+    "typescript": "catalog:"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "expo": {
+    "scheme": "fast-expo",
+    "userInterfaceStyle": "automatic",
+    "orientation": "default",
+    "web": {
+      "bundler": "metro"
+    },
+    "name": "fast-expo",
+    "slug": "fast-expo",
+    "plugins": ["expo-font"],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "@fast-expo/auth",
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./src/index.ts"
+    },
+    "./*": {
+      "default": "./src/*.ts"
+    }
+  },
+  "scripts": {},
+  "dependencies": {
+    "@better-auth/expo": "catalog:",
+    "@fast-expo/db": "workspace:*",
+    "@fast-expo/env": "workspace:*",
+    "better-auth": "catalog:",
+    "dotenv": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@fast-expo/config": "workspace:*",
+    "typescript": "catalog:"
+  }
+}
