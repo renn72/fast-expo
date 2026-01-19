@@ -22,7 +22,7 @@ WORKDIR /app/apps/server
 RUN pnpm install --frozen-lockfile
 
 # Compile the application
-RUN pnpm Build
+RUN pnpm build
 
 # Use a lightweight image for the final stage
 FROM node:22-slim
