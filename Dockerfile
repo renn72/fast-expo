@@ -38,8 +38,10 @@ COPY --from=builder /app/apps/server/ .
 # Expose port 3000
 EXPOSE 3000
 
+RUN ls
+
 # Set the port environment variable
 ENV PORT=3000
 
 # start the server
-RUN pnpm start
+RUN node --import tsx dist/src/index.js
