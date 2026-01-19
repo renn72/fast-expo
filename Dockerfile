@@ -3,6 +3,12 @@ FROM node:22-slim AS builder
 
 RUN npm install -g pnpm@latest-10
 RUN pnpm -v
+RUN curl -fsSL https://bun.sh/install | bash
+
+# Ensure Bun is available in the PATH
+ENV PATH="/root/.bun/bin:${PATH}"
+# Verify installation
+RUN bun --version
 
 # Set the working directory
 WORKDIR /app
