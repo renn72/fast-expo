@@ -238,6 +238,9 @@ importers:
       fastify:
         specifier: ^5.3.3
         version: 5.7.1
+      tsx:
+        specifier: ^4.19.2
+        version: 4.21.0
       zod:
         specifier: 'catalog:'
         version: 4.3.5
@@ -251,9 +254,6 @@ importers:
       tsdown:
         specifier: ^0.16.5
         version: 0.16.8(typescript@5.9.3)
-      tsx:
-        specifier: ^4.19.2
-        version: 4.21.0
       typescript:
         specifier: 'catalog:'
         version: 5.9.3

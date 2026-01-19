@@ -21,13 +21,13 @@
     "better-auth": "catalog:",
     "dotenv": "catalog:",
     "fastify": "^5.3.3",
+    "tsx": "^4.19.2",
     "zod": "catalog:"
   },
   "devDependencies": {
     "@fast-expo/config": "workspace:*",
     "@types/node": "^22.13.14",
     "tsdown": "^0.16.5",
-    "tsx": "^4.19.2",
     "typescript": "catalog:"
   }
 }
