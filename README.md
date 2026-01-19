@@ -83,4 +83,3 @@ fast-expo/
 - `pnpm run db:push`: Push schema changes to database
 - `pnpm run db:studio`: Open database studio UI
 - `pnpm run db:local`: Start the local SQLite database
-- `pnpm run check`: Run Biome formatting and linting
