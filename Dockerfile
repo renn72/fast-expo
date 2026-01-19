@@ -33,7 +33,9 @@ WORKDIR /app
 RUN mkdir db
 
 # Copy the compiled server from the builder stage
-COPY --from=builder /app/apps/server/ .
+COPY --from=builder /app /app
+
+WORKDIR /app/apps/server
 
 # Expose port 3000
 EXPOSE 3000
@@ -45,4 +47,4 @@ RUN cat package.json
 ENV PORT=3000
 
 # start the server
-RUN pnpm start
+RUN npm run start
