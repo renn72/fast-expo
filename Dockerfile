@@ -1,11 +1,6 @@
 # Use the official Bun image as the base image
 FROM node:22-slim AS builder
 
-RUN apt update -y && apt install curl unzip -y
-RUN curl -fsSL https://deb.nodesource.com/setup_24.x | bash - \
-  && apt-get install -y nodejs \
-  && apt-get clean && rm -rf /var/lib/apt/lists/*
-RUN npm -v
 RUN npm install -g pnpm@latest-10
 RUN pnpm -v
 
@@ -26,7 +21,7 @@ WORKDIR /app/apps/server
 RUN pnpm install --frozen-lockfile
 
 # Compile the application
-RUN bun compile
+RUN npm compile
 
 # Use a lightweight image for the final stage
 FROM node:22-slim
