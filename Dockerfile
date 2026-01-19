@@ -47,4 +47,4 @@ RUN cat package.json
 ENV PORT=3000
 
 # start the server
-RUN npm run start
+CMD ["node", "--import", "tsx", "dist/src/index.js"]
